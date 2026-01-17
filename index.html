@@ -293,7 +293,7 @@
     const blocklyDiv = document.getElementById('blocklyDiv');
     const blocklyArea = document.getElementById('blocklyArea');
     const toolbox = document.getElementById('toolbox');
-    let exampleIndex = 0;
+    let exampleIndex = -1;
 
     const workspace = Blockly.inject(blocklyDiv, {
       toolbox: toolbox,
@@ -569,4 +569,5 @@
   </script>
 </body>
 </html>
+
 
