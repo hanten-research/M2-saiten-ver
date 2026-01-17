@@ -1,0 +1,428 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="d+gKmj^9pKuZ7[;(S*D_">x</variable>
+    <variable id="u{Z:y[67o0K9_C{r0hs6">a_3</variable>
+    <variable id="Q*f+`V#8.u.;UCz2cP,C">a_2</variable>
+    <variable id="KF(ZWBIPNIA`c=c%#N#n">a_1</variable>
+    <variable id="LWJl?fCL4m?jsp}3hT5j">a_0</variable>
+    <variable id="*oCB$PB@qW%vJqd%hnK.">b_2</variable>
+    <variable id="0?;fj%iVLXYbMfNL9%`*">b_1</variable>
+    <variable id="*Nm;,D..lQMR^MNj`y81">b_0</variable>
+    <variable id="DrA#JcBhRm.@jf5!k]rc">f</variable>
+    <variable id="$+F^/3gaIC-R5tW+5)nQ">d</variable>
+  </variables>
+  <block type="variables_set" id="yWXi0HcEYara+(7h%R|Y" x="330" y="30">
+    <field name="VAR" id="d+gKmj^9pKuZ7[;(S*D_">x</field>
+    <value name="VALUE">
+      <block type="math_number" id="y[zTiMGByW?-Kfgwxf~C">
+        <field name="NUM">2.5</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="d?JM~Tlj!]8v+:uHnkQ_">
+        <field name="VAR" id="u{Z:y[67o0K9_C{r0hs6">a_3</field>
+        <value name="VALUE">
+          <block type="math_number" id="!PeL5@7klh*qe9JD@:ia">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="xUX.%y:Q}vwk7a]99dS*">
+            <field name="VAR" id="Q*f+`V#8.u.;UCz2cP,C">a_2</field>
+            <value name="VALUE">
+              <block type="math_number" id="E1z~zzD3kug9?Y1B*{2b">
+                <field name="NUM">-3</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="h`o|7nf8vwESy1w,{v_.">
+                <field name="VAR" id="KF(ZWBIPNIA`c=c%#N#n">a_1</field>
+                <value name="VALUE">
+                  <block type="math_number" id="#Z|)5,sy_~J[/1TUPxWF">
+                    <field name="NUM">-1</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="Bbb]n6d?[rrj8MPrh}$f">
+                    <field name="VAR" id="LWJl?fCL4m?jsp}3hT5j">a_0</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="t(c@d74*!F{ZW|%,tGqL">
+                        <field name="NUM">3</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="t@!.jcVaI_$q6IlWg1,=">
+                        <field name="VAR" id="*oCB$PB@qW%vJqd%hnK.">b_2</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="_W=jL7L-o^isfRUi|{[b">
+                            <field name="OP">MULTIPLY</field>
+                            <value name="A">
+                              <shadow type="math_number" id="Y;/XD#J.8RHTHCu|Vjl9">
+                                <field name="NUM">3</field>
+                              </shadow>
+                            </value>
+                            <value name="B">
+                              <shadow type="math_number" id="{xTV`uXH,}?|6U`/?NWq">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="variables_get" id="0,4k5/{#Pd!}73gx6aHQ">
+                                <field name="VAR" id="u{Z:y[67o0K9_C{r0hs6">a_3</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="ENf9]hbVgbd-rfw-5#-+">
+                            <field name="VAR" id="0?;fj%iVLXYbMfNL9%`*">b_1</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="Awn@E(BEj:NpBOiT@.T=">
+                                <field name="OP">MULTIPLY</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="0a=i$a]`M-@JzMgH14*(">
+                                    <field name="NUM">2</field>
+                                  </shadow>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="{xTV`uXH,}?|6U`/?NWq">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="variables_get" id="ta?svtIRtrC_LT0jRTz,">
+                                    <field name="VAR" id="Q*f+`V#8.u.;UCz2cP,C">a_2</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="P[=-_8#4$*Dlv@vyl[lT">
+                                <field name="VAR" id="*Nm;,D..lQMR^MNj`y81">b_0</field>
+                                <value name="VALUE">
+                                  <block type="math_arithmetic" id=",`ZDF]HmZ18tD-+_U,zs">
+                                    <field name="OP">MULTIPLY</field>
+                                    <value name="A">
+                                      <shadow type="math_number" id="$1P23O?cf=VWYAhoM8Bt">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="B">
+                                      <shadow type="math_number" id="{xTV`uXH,}?|6U`/?NWq">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                      <block type="variables_get" id="+y^%^|8-(WcL.fVY2Mxv">
+                                        <field name="VAR" id="KF(ZWBIPNIA`c=c%#N#n">a_1</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="controls_repeat_ext" id="vUcK.x*L1!/|y%E)Kt=B">
+                                    <value name="TIMES">
+                                      <shadow type="math_number" id="B?!PZYDA:O]L~Nkm)p)n">
+                                        <field name="NUM">3</field>
+                                      </shadow>
+                                    </value>
+                                    <statement name="DO">
+                                      <block type="variables_set" id="z,y|~$!}{EtTrwRvv5w$">
+                                        <field name="VAR" id="DrA#JcBhRm.@jf5!k]rc">f</field>
+                                        <value name="VALUE">
+                                          <block type="math_arithmetic" id="8N6fu1-AWP!F6lH{n.eG">
+                                            <field name="OP">ADD</field>
+                                            <value name="A">
+                                              <shadow type="math_number" id="3{9g%};)Sg#*b9r-,3(7">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                              <block type="math_arithmetic" id="41,({rXl)2/YM;w_:!BS">
+                                                <field name="OP">MULTIPLY</field>
+                                                <value name="A">
+                                                  <shadow type="math_number" id="r_[J5%:Q=|4Q6(GA@yj9">
+                                                    <field name="NUM">1</field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="=3k^VkZNG]_,F.5A5*,p">
+                                                    <field name="VAR" id="u{Z:y[67o0K9_C{r0hs6">a_3</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <shadow type="math_number" id="%?1C{U}N^h@2R_ep3]f:">
+                                                    <field name="NUM">1</field>
+                                                  </shadow>
+                                                  <block type="math_arithmetic" id="cILJQD%Ve5271z6xaP6T">
+                                                    <field name="OP">POWER</field>
+                                                    <value name="A">
+                                                      <shadow type="math_number" id="72.SW+6e+v#S;l)3iedk">
+                                                        <field name="NUM">1</field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="IJJBfJWiviY{)g;@jv?Z">
+                                                        <field name="VAR" id="d+gKmj^9pKuZ7[;(S*D_">x</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <shadow type="math_number" id="I`*IPxtDQyPJdWmT(erZ">
+                                                        <field name="NUM">3</field>
+                                                      </shadow>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <shadow type="math_number" id="B0Tvo]l`jA/ol^,~==KM">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                              <block type="math_arithmetic" id="B7OEGBvsbb8CZ*f2LG[I">
+                                                <field name="OP">ADD</field>
+                                                <value name="A">
+                                                  <shadow type="math_number" id="j{1$)zJIeYK=H=Y_/vEW">
+                                                    <field name="NUM">1</field>
+                                                  </shadow>
+                                                  <block type="math_arithmetic" id="~uF{(zb-J$w;,6l0;)Fa">
+                                                    <field name="OP">MULTIPLY</field>
+                                                    <value name="A">
+                                                      <shadow type="math_number" id="r_[J5%:Q=|4Q6(GA@yj9">
+                                                        <field name="NUM">1</field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="lxhxHD*wuzTLL6pxB^Mu">
+                                                        <field name="VAR" id="Q*f+`V#8.u.;UCz2cP,C">a_2</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <shadow type="math_number" id="%?1C{U}N^h@2R_ep3]f:">
+                                                        <field name="NUM">1</field>
+                                                      </shadow>
+                                                      <block type="math_arithmetic" id="LBg~P}yNz^ieCb;,mx8W">
+                                                        <field name="OP">POWER</field>
+                                                        <value name="A">
+                                                          <shadow type="math_number" id="72.SW+6e+v#S;l)3iedk">
+                                                            <field name="NUM">1</field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="6flNGvP4]ec:IoW^={eo">
+                                                            <field name="VAR" id="d+gKmj^9pKuZ7[;(S*D_">x</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <shadow type="math_number" id="GuwKS+HjJ-SSZP=(Z.ow">
+                                                            <field name="NUM">2</field>
+                                                          </shadow>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <shadow type="math_number" id="P0?e8@atLw(T?u3z6,13">
+                                                    <field name="NUM">1</field>
+                                                  </shadow>
+                                                  <block type="math_arithmetic" id="-~ndJH!vq)Ae.ye*tjgO">
+                                                    <field name="OP">ADD</field>
+                                                    <value name="A">
+                                                      <shadow type="math_number" id="oDM16rA^6Ce0Qf#6YObH">
+                                                        <field name="NUM">1</field>
+                                                      </shadow>
+                                                      <block type="math_arithmetic" id="7s@oMb$d%~-SoRstMJlU">
+                                                        <field name="OP">MULTIPLY</field>
+                                                        <value name="A">
+                                                          <shadow type="math_number" id="r_[J5%:Q=|4Q6(GA@yj9">
+                                                            <field name="NUM">1</field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="nui#x{yp#a#~^9PF(xeS">
+                                                            <field name="VAR" id="KF(ZWBIPNIA`c=c%#N#n">a_1</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <shadow type="math_number" id="%?1C{U}N^h@2R_ep3]f:">
+                                                            <field name="NUM">1</field>
+                                                          </shadow>
+                                                          <block type="variables_get" id=":z;7;S2+:kGDAmLMJ[Pi">
+                                                            <field name="VAR" id="d+gKmj^9pKuZ7[;(S*D_">x</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <shadow type="math_number" id="XUd?X0AbgB15nAJsvhU3">
+                                                        <field name="NUM">1</field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="Kaf-?ch*v;MQu6aQf,d)">
+                                                        <field name="VAR" id="LWJl?fCL4m?jsp}3hT5j">a_0</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="variables_set" id="w%y@7$R__v(l_]uAjhQ^">
+                                            <field name="VAR" id="$+F^/3gaIC-R5tW+5)nQ">d</field>
+                                            <value name="VALUE">
+                                              <block type="math_arithmetic" id="ZEC9yWXE7n$ul@(m1QXt">
+                                                <field name="OP">ADD</field>
+                                                <value name="A">
+                                                  <shadow type="math_number" id="3{9g%};)Sg#*b9r-,3(7">
+                                                    <field name="NUM">1</field>
+                                                  </shadow>
+                                                  <block type="math_arithmetic" id="U/7@LGE+Jmi@}@U.Q:5`">
+                                                    <field name="OP">MULTIPLY</field>
+                                                    <value name="A">
+                                                      <shadow type="math_number" id="r_[J5%:Q=|4Q6(GA@yj9">
+                                                        <field name="NUM">1</field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="MH.=^q*n:IjL;Y8/[o6;">
+                                                        <field name="VAR" id="*oCB$PB@qW%vJqd%hnK.">b_2</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <shadow type="math_number" id="%?1C{U}N^h@2R_ep3]f:">
+                                                        <field name="NUM">1</field>
+                                                      </shadow>
+                                                      <block type="math_arithmetic" id="ijCyZFBr4#}.=H]11|_o">
+                                                        <field name="OP">POWER</field>
+                                                        <value name="A">
+                                                          <shadow type="math_number" id="72.SW+6e+v#S;l)3iedk">
+                                                            <field name="NUM">1</field>
+                                                          </shadow>
+                                                          <block type="variables_get" id=".Ih{_vp$TR8?m~_m2mM/">
+                                                            <field name="VAR" id="d+gKmj^9pKuZ7[;(S*D_">x</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <shadow type="math_number" id="JcY2+W~dy*SUqT?C.b]5">
+                                                            <field name="NUM">2</field>
+                                                          </shadow>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <shadow type="math_number" id="B0Tvo]l`jA/ol^,~==KM">
+                                                    <field name="NUM">1</field>
+                                                  </shadow>
+                                                  <block type="math_arithmetic" id="+VT)lr|;RiHzd.P/vt=6">
+                                                    <field name="OP">ADD</field>
+                                                    <value name="A">
+                                                      <shadow type="math_number" id="j{1$)zJIeYK=H=Y_/vEW">
+                                                        <field name="NUM">1</field>
+                                                      </shadow>
+                                                      <block type="math_arithmetic" id="zd4g2/Mgea!VCLU38EY^">
+                                                        <field name="OP">MULTIPLY</field>
+                                                        <value name="A">
+                                                          <shadow type="math_number" id="r_[J5%:Q=|4Q6(GA@yj9">
+                                                            <field name="NUM">1</field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="?s58`)PZkDFX,#:VI}D-">
+                                                            <field name="VAR" id="0?;fj%iVLXYbMfNL9%`*">b_1</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <shadow type="math_number" id="%?1C{U}N^h@2R_ep3]f:">
+                                                            <field name="NUM">1</field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="D{;]gwZCKy*KZLY2o}X_">
+                                                            <field name="VAR" id="d+gKmj^9pKuZ7[;(S*D_">x</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <shadow type="math_number" id="P0?e8@atLw(T?u3z6,13">
+                                                        <field name="NUM">1</field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="s/bd64++5`Xd|ZE60x]R">
+                                                        <field name="VAR" id="*Nm;,D..lQMR^MNj`y81">b_0</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="print_console" id="4T8QRrc,J[`|3R]@)iA0">
+                                                <value name="TEXT">
+                                                  <block type="variables_get" id="@5)x[*6.To;=}o0gmF`P">
+                                                    <field name="VAR" id="d+gKmj^9pKuZ7[;(S*D_">x</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="print_console" id="*Q[s~VRjZ{q]rJ4|?jVn">
+                                                    <value name="TEXT">
+                                                      <block type="variables_get" id="IH[*Dnaat#l?@Rdfd.@4">
+                                                        <field name="VAR" id="DrA#JcBhRm.@jf5!k]rc">f</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="print_console" id="2TmPRTy6}ngVA13R^Z,1">
+                                                        <value name="TEXT">
+                                                          <block type="variables_get" id="jdKx#/*bJr#j?/3/X=u*">
+                                                            <field name="VAR" id="$+F^/3gaIC-R5tW+5)nQ">d</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="variables_set" id="/m,zxNdHSJ*TK5(-6rn%">
+                                                            <field name="VAR" id="d+gKmj^9pKuZ7[;(S*D_">x</field>
+                                                            <value name="VALUE">
+                                                              <block type="math_arithmetic" id=":GJu+vU-NiG-:1-mO.;B">
+                                                                <field name="OP">MINUS</field>
+                                                                <value name="A">
+                                                                  <shadow type="math_number" id="`^_T-FBxe+fBA8.b;EdA">
+                                                                    <field name="NUM">1</field>
+                                                                  </shadow>
+                                                                  <block type="variables_get" id="_?3#enO{?VAS.,p)|vpH">
+                                                                    <field name="VAR" id="d+gKmj^9pKuZ7[;(S*D_">x</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="B">
+                                                                  <shadow type="math_number" id="SsGc+8aa.Y%j]F*b^s{7">
+                                                                    <field name="NUM">1</field>
+                                                                  </shadow>
+                                                                  <block type="math_arithmetic" id="}FNO:0L#g/=N3fIE1/FJ">
+                                                                    <field name="OP">DIVIDE</field>
+                                                                    <value name="A">
+                                                                      <shadow type="math_number" id=")fR_]68TBbwA^1)bzTpJ">
+                                                                        <field name="NUM">1</field>
+                                                                      </shadow>
+                                                                      <block type="variables_get" id="t-o+Q-%a0ak@n[e.`e{J">
+                                                                        <field name="VAR" id="DrA#JcBhRm.@jf5!k]rc">f</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="B">
+                                                                      <shadow type="math_number" id="}JoWes(sG6qJgSJP{L!l">
+                                                                        <field name="NUM">1</field>
+                                                                      </shadow>
+                                                                      <block type="variables_get" id="4$%E9stx!SP@4:WAm8Vz">
+                                                                        <field name="VAR" id="$+F^/3gaIC-R5tW+5)nQ">d</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </statement>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

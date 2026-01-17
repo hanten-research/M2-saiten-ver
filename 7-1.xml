@@ -1,0 +1,229 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id=",`%dp;A-V5VGK4XG^J:x">i</variable>
+    <variable id="R?EaUXqv#it6OJim.g6n">ans</variable>
+  </variables>
+  <block type="controls_for" id="?j-4k%}%^dWrC3c-%nYZ" x="130" y="-190">
+    <field name="VAR" id=",`%dp;A-V5VGK4XG^J:x">i</field>
+    <value name="FROM">
+      <shadow type="math_number" id="^~N-W_}+.u8?%TgY7{Kl">
+        <field name="NUM">1</field>
+      </shadow>
+    </value>
+    <value name="TO">
+      <shadow type="math_number" id="e}@w5DG*SzK8S,U!3m4X">
+        <field name="NUM">15</field>
+      </shadow>
+    </value>
+    <value name="BY">
+      <shadow type="math_number" id="jVG|7NG$SDjqL]{O9{Zf">
+        <field name="NUM">1</field>
+      </shadow>
+    </value>
+    <statement name="DO">
+      <block type="controls_if" id="RcgA12zm)tdBJ{M7aLn?">
+        <value name="IF0">
+          <block type="logic_operation" id="2d}Cw~xLMQf$~;0KM)q[">
+            <field name="OP">AND</field>
+            <value name="A">
+              <block type="logic_compare" id="sWpusr7Cdg3(sXB`_yd,">
+                <field name="OP">NEQ</field>
+                <value name="A">
+                  <block type="math_modulo" id="v:6qz5ib]vRqH|9ZK038">
+                    <value name="DIVIDEND">
+                      <shadow type="math_number" id="`9xrIbhCmd5c9t{pe`ML">
+                        <field name="NUM">64</field>
+                      </shadow>
+                      <block type="variables_get" id="gAHv[OQWhiwbl5/=/R8C">
+                        <field name="VAR" id=",`%dp;A-V5VGK4XG^J:x">i</field>
+                      </block>
+                    </value>
+                    <value name="DIVISOR">
+                      <shadow type="math_number" id="|+@5?lvG#T[T|YpU:JFq">
+                        <field name="NUM">3</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="R8Pjj8Fz_27TQq,:CZUj">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_compare" id="rtNunuN(H:BMCC[qx=f%">
+                <field name="OP">NEQ</field>
+                <value name="A">
+                  <block type="math_modulo" id="sJG9CA=PyMAzH[;`G@ud">
+                    <value name="DIVIDEND">
+                      <shadow type="math_number" id="2WRJNFeJ.pJ}AP(CYFsU">
+                        <field name="NUM">64</field>
+                      </shadow>
+                      <block type="variables_get" id="vNwXuSI93p]-U)LC/zE$">
+                        <field name="VAR" id=",`%dp;A-V5VGK4XG^J:x">i</field>
+                      </block>
+                    </value>
+                    <value name="DIVISOR">
+                      <shadow type="math_number" id="_-/0Mv0W^mmaIN{S#EM=">
+                        <field name="NUM">5</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="Ue|*,+Xy.@D|K(0|}(v%">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="variables_set" id="%:53)G.b~_JGpW?aI0Rp">
+            <field name="VAR" id="R?EaUXqv#it6OJim.g6n">ans</field>
+            <value name="VALUE">
+              <block type="variables_get" id="}5JG0Gd$ZC6Ktppj*TCK">
+                <field name="VAR" id=",`%dp;A-V5VGK4XG^J:x">i</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="`j3VNr0}}x)(wgy1;anw">
+            <value name="IF0">
+              <block type="logic_compare" id="6R,9@$#zJYe_b!a%Ek#g">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_modulo" id="d/g$8F+|9YdXz{?ehr76">
+                    <value name="DIVIDEND">
+                      <shadow type="math_number" id="3p_IdcdwoqGlo6-ScsDu">
+                        <field name="NUM">64</field>
+                      </shadow>
+                      <block type="variables_get" id="ssFZa+(%P+)4ZE{BLrX5">
+                        <field name="VAR" id=",`%dp;A-V5VGK4XG^J:x">i</field>
+                      </block>
+                    </value>
+                    <value name="DIVISOR">
+                      <shadow type="math_number" id="rv]WrF0q6WuZISo?!8j#">
+                        <field name="NUM">3</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="r][$HEB:$a68Y?,.~NZF">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="variables_set" id="G#GJLOQWN%76!39{Ale^">
+                <field name="VAR" id="R?EaUXqv#it6OJim.g6n">ans</field>
+                <value name="VALUE">
+                  <block type="text" id="gI1AZA$n#-MLO)lKufa}">
+                    <field name="TEXT">Fizz</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="controls_if" id="xR49eRx:5k[F/TQ#{+*A">
+                <value name="IF0">
+                  <block type="logic_compare" id="bF-.a7b-4#NTf$,=`Y/c">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="math_modulo" id="M!dul0I}*+6Z`_+saflo">
+                        <value name="DIVIDEND">
+                          <shadow type="math_number" id="ty|tj`:z|e%FM2F6F.-~">
+                            <field name="NUM">64</field>
+                          </shadow>
+                          <block type="variables_get" id="Z*H~?(8+1U-PU_e9_}*W">
+                            <field name="VAR" id=",`%dp;A-V5VGK4XG^J:x">i</field>
+                          </block>
+                        </value>
+                        <value name="DIVISOR">
+                          <shadow type="math_number" id="nmNNv}bKO/;VZ*nNnQvq">
+                            <field name="NUM">5</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="TF2DE$?2a~^az@iga|+y">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="variables_set" id="Wt*s;}OH6r${Nmg|nQ,/">
+                    <field name="VAR" id="R?EaUXqv#it6OJim.g6n">ans</field>
+                    <value name="VALUE">
+                      <block type="text" id="iTT)d)U|#d/K6$16:+hH">
+                        <field name="TEXT">Buzz</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="ujXx:ItfMHd-LDB^kbfu">
+                    <value name="IF0">
+                      <block type="logic_compare" id=":lWg=T(b27h(*o]ECE*V">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="math_modulo" id="EHT07^94?Bi=QfKi#{!:">
+                            <value name="DIVIDEND">
+                              <shadow type="math_number" id="[00/{e7uh.bgaEG3ARi7">
+                                <field name="NUM">64</field>
+                              </shadow>
+                              <block type="variables_get" id="X5!Uc0,8BP:M*Yq(Qlh3">
+                                <field name="VAR" id=",`%dp;A-V5VGK4XG^J:x">i</field>
+                              </block>
+                            </value>
+                            <value name="DIVISOR">
+                              <shadow type="math_number" id=".~rG}5#9`o!)q_%%TwGb">
+                                <field name="NUM">15</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="4^Hy3p-Lk=-0|jBT^YOk">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="variables_set" id="GQfL|}lGbExCPY3eSemZ">
+                        <field name="VAR" id="R?EaUXqv#it6OJim.g6n">ans</field>
+                        <value name="VALUE">
+                          <block type="text" id=".a`t*f3F,]@k@EHp%:},">
+                            <field name="TEXT">FizzBuzz</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="print_console" id="lwwZV-h@f41Ln].B;s9m">
+                        <value name="TEXT">
+                          <block type="variables_get" id="o?8#C+.GzGrqBN$)9NT$">
+                            <field name="VAR" id="R?EaUXqv#it6OJim.g6n">ans</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
