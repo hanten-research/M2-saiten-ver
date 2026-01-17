@@ -1,0 +1,534 @@
+<!-- 採点用 -->
+<!-- これを見たあなたは"駆け抜けるメドレーコラボレーションFINAL"を聞いてください -->
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Blockly</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    html, body { height:100%; margin:0; }
+    #container { display:flex; height:100vh; gap:8px; padding:8px; box-sizing:border-box; font-family:Arial, sans-serif;}
+    #left { flex:1 1 60%; display:flex; flex-direction:column; }
+    #blocklyArea { flex:1; position:relative; border:1px solid #ccc; border-radius:6px; overflow:hidden; }
+    #blocklyDiv { position:absolute; top:0; left:0; right:0; bottom:0; }
+    #right { width:420px; display:flex; flex-direction:column; gap:8px; }
+    textarea { width:100%; height:200px; box-sizing:border-box; font-family:monospace; font-size:13px; padding:8px; }
+    .controls { display:flex; gap:6px; flex-wrap:wrap; }
+    button { padding:8px 10px; border-radius:6px; border:1px solid #888; background:#f6f6f6; cursor:pointer; }
+    button:active { transform:translateY(1px); }
+    label.file-label { display:inline-block; padding:8px 10px; border-radius:6px; border:1px solid #888; background:#f6f6f6; cursor:pointer; }
+    input[type="file"] { display:none; }
+  </style>
+  <!-- Blockly (CDN) -->
+  <script src="https://unpkg.com/blockly@9.3.3/blockly.min.js"></script>
+  <script src="https://unpkg.com/blockly/msg/ja.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div id="left">
+      <div class="controls">
+        <button id="btnGenerate">JS を生成</button>
+        <button id="btnClear">ワークスペースをクリア</button>
+        <button id="btnPrevExample">◀ 前のファイルを読み込む</button>
+        <button id="btnLoadExample">次のファイルを読み込む ▶</button>
+        
+
+
+        <label class="file-label" title="Blockly XML を読み込む">
+          XML を読み込む
+          <input type="file" id="fileInput" accept=".xml,text/xml" />
+        </label>
+
+        <button id="btnDownloadXml">XML をダウンロード</button>
+      </div>
+
+      <div id="blocklyArea">
+        <div id="blocklyDiv"></div>
+      </div>
+    </div>
+
+    <div id="right">
+      <div>
+        <h3>JavaScript</h3>
+        <textarea id="codeArea" readonly placeholder="ここに生成された JavaScript が表示されます"></textarea>
+      </div>
+
+      <div>
+        <h3>コンソール</h3>
+        <textarea id="logArea" readonly placeholder="実行ログがここに表示されます"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- ツールボックス -->
+  <xml id="toolbox" style="display: none">
+    <category name="論理" colour="#5C81A6">
+      <block type="controls_if"></block>
+      <block type="logic_compare"></block>
+      <block type="logic_operation"></block>
+      <block type="logic_boolean"></block>
+    </category>
+    <category name="ループ" colour="#5ba55b">
+      <block type="controls_repeat_ext">
+        <value name="TIMES">
+          <shadow type="math_number">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="controls_whileUntil">
+        <field name="MODE">WHILE</field>
+      </block>
+      <block type="controls_for">
+        <field name="VAR" id=",`%dp;A-V5VGK4XG^J:x">i</field>
+        <value name="FROM">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="TO">
+          <shadow type="math_number">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+        <value name="BY">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="controls_forEach">
+        <field name="VAR" id="5)8pKb2H!JX[t`?ytZhd">j</field>
+      </block>
+      <block type="controls_flow_statements">
+        <field name="FLOW">BREAK</field>
+      </block>
+    </category>
+    <category name="数" colour="#5b67a5">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+      <block type="math_arithmetic">
+        <field name="OP">ADD</field>
+        <value name="A">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="B">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_single">
+        <field name="OP">ROOT</field>
+        <value name="NUM">
+          <shadow type="math_number">
+            <field name="NUM">9</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_trig">
+        <field name="OP">SIN</field>
+        <value name="NUM">
+          <shadow type="math_number">
+            <field name="NUM">45</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_constant">
+        <field name="CONSTANT">PI</field>
+      </block>
+      <block type="math_number_property">
+        <mutation divisor_input="false"></mutation>
+        <field name="PROPERTY">EVEN</field>
+        <value name="NUMBER_TO_CHECK">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_round">
+        <field name="OP">ROUND</field>
+        <value name="NUM">
+          <shadow type="math_number">
+            <field name="NUM">3.1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_on_list">
+        <mutation op="SUM"></mutation>
+        <field name="OP">SUM</field>
+      </block>
+      <block type="math_modulo">
+        <value name="DIVIDEND">
+          <shadow type="math_number">
+            <field name="NUM">64</field>
+          </shadow>
+        </value>
+        <value name="DIVISOR">
+          <shadow type="math_number">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_constrain">
+        <value name="VALUE">
+          <shadow type="math_number">
+            <field name="NUM">50</field>
+          </shadow>
+        </value>
+        <value name="LOW">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="HIGH">
+          <shadow type="math_number">
+            <field name="NUM">100</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_random_int">
+        <value name="FROM">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="TO">
+          <shadow type="math_number">
+            <field name="NUM">100</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_random_float"></block>
+    </category>    
+    <category name="文字列" colour="#5CA68D">
+      <block type="text"></block>
+      <block type="text_print"></block>
+      <block type="print_console"></block>
+      <block type="text_join"></block>
+    </category>
+    <category name="配列" colour="#745ba5">
+      <block type="lists_create_with">
+        <mutation items="0"></mutation>
+      </block>
+      <block type="lists_create_with">
+        <mutation items="3"></mutation>
+      </block>
+      <block type="lists_repeat">
+        <value name="NUM">
+          <shadow type="math_number">
+            <field name="NUM">5</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="lists_length"></block>
+      <block type="lists_isEmpty"></block>
+      <block type="lists_indexOf">
+        <field name="END">FIRST</field>
+        <value name="VALUE">
+          <block type="variables_get">
+            <field name="VAR" id="FAE2-W]{-]m[OC4-oAJ{">list</field>
+          </block>
+        </value>
+      </block>
+      <block type="lists_getIndex">
+        <mutation statement="false" at="true"></mutation>
+        <field name="MODE">GET</field>
+        <field name="WHERE">FROM_START</field>
+        <value name="VALUE">
+          <block type="variables_get">
+            <field name="VAR" id="FAE2-W]{-]m[OC4-oAJ{">list</field>
+          </block>
+        </value>
+      </block>
+      <block type="lists_setIndex">
+        <mutation at="true"></mutation>
+        <field name="MODE">SET</field>
+        <field name="WHERE">FROM_START</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR" id="FAE2-W]{-]m[OC4-oAJ{">list</field>
+          </block>
+        </value>
+      </block>
+      <block type="lists_getSublist">
+        <mutation at1="true" at2="true"></mutation>
+        <field name="WHERE1">FROM_START</field>
+        <field name="WHERE2">FROM_START</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR" id="FAE2-W]{-]m[OC4-oAJ{">list</field>
+          </block>
+        </value>
+      </block>
+      <block type="lists_split">
+        <mutation mode="SPLIT"></mutation>
+        <field name="MODE">SPLIT</field>
+        <value name="DELIM">
+          <shadow type="text">
+            <field name="TEXT">,</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="lists_sort">
+        <field name="TYPE">NUMERIC</field>
+        <field name="DIRECTION">1</field>
+      </block>
+      <block type="array_get_index"></block>
+      <block type="array_set_index"></block>
+    </category>
+    <category name="変数" colour="#A65C81" custom="VARIABLE"></category>
+    <category name="関数" colour="#A6745C" custom="PROCEDURE"></category>
+  </xml>
+  <!-- ツールボックス　終 -->
+
+  <script>
+    // Blocklyを注入
+    const blocklyDiv = document.getElementById('blocklyDiv');
+    const blocklyArea = document.getElementById('blocklyArea');
+    const toolbox = document.getElementById('toolbox');
+    let exampleIndex = 0;
+
+    const workspace = Blockly.inject(blocklyDiv, {
+      toolbox: toolbox,
+      trashcan: true,
+      locale: 'ja',
+      zoom: {controls: true, wheel: true, startScale: 1.0, maxScale: 3, minScale: 0.3, scaleSpeed: 1.2},
+      grid: {spacing: 20, length: 3, colour: '#ddd', snap:true},
+      renderer: 'thrasos' // もしくは'geras'など
+    });
+
+    // レスポンシブ対応：divをリサイズしてからBlocklyに再計算させる
+    function onResize() {
+      const element = blocklyArea;
+      const x = 0, y = 0;
+      blocklyDiv.style.left = x + 'px';
+      blocklyDiv.style.top = y + 'px';
+      blocklyDiv.style.width = element.clientWidth + 'px';
+      blocklyDiv.style.height = element.clientHeight + 'px';
+      Blockly.svgResize(workspace);
+    }
+    window.addEventListener('resize', onResize, false);
+    onResize();
+    // レスポンシブ対応　終
+
+    // UI要素
+    const btnGenerate = document.getElementById('btnGenerate');
+    const btnShowXml = document.getElementById('btnShowXml');
+    const btnClear = document.getElementById('btnClear');
+    const btnLoadExample = document.getElementById('btnLoadExample');
+    btnLoadExample.addEventListener('click', loadNextExample);
+    const btnPrevExample = document.getElementById('btnPrevExample');
+    btnPrevExample.addEventListener('click', loadPrevExample);
+
+    const btnDownloadXml = document.getElementById('btnDownloadXml');
+
+    const codeArea = document.getElementById('codeArea');
+    const xmlArea = document.getElementById('xmlArea');
+    const logArea = document.getElementById('logArea');
+    const fileInput = document.getElementById('fileInput');
+
+    function log(msg) {
+      const t = new Date().toLocaleTimeString();
+      logArea.value = `[${t}] ${msg}\n` + logArea.value;
+    }
+    // UI対応　終
+
+    // JavaScriptの生成
+    function generateCode() {
+      const code = Blockly.JavaScript.workspaceToCode(workspace);
+      codeArea.value = code;
+      return code;
+    }
+
+    btnGenerate.addEventListener('click', () => {
+      generateCode();
+      log('JavaScript を生成しました。');
+    });
+    // JavaScriptの生成　終
+
+    // ワークスペースをクリア
+    btnClear.addEventListener('click', () => {
+      if (confirm('ワークスペースを本当にクリアしますか？保存していない変更は失われます。')) {
+        workspace.clear();
+        log('ワークスペースをクリアしました。');
+      }
+    });
+    // ワークスペースをクリア　終
+
+    // XMLを読み込む
+    fileInput.addEventListener('change', (ev) => {
+      const f = ev.target.files[0];
+      if (!f) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const xmlText = e.target.result;
+          const dom = Blockly.Xml.textToDom(xmlText);
+          workspace.clear();
+          Blockly.Xml.domToWorkspace(dom, workspace);
+          log('XML ファイルを読み込みました: ' + f.name);
+          generateCode();
+        } catch (err) {
+          log('XML の読み込みに失敗しました: ' + err);
+        }
+      };
+      reader.readAsText(f, 'utf-8');
+      // 同じファイルの読み込みを可能にするためのリセット
+      fileInput.value = '';
+    });
+    // XMLを読み込む　終
+
+    // XMLをダウンロード
+    btnDownloadXml.addEventListener('click', () => {
+      const xmlDom = Blockly.Xml.workspaceToDom(workspace);
+      const xmlText = Blockly.Xml.domToPrettyText(xmlDom);
+
+      // ファイル名の入力
+      let filename = prompt("保存するファイル名を入力してください（拡張子なし）", "workspace");
+      if (!filename) return;  // キャンセル時は中止
+      if (!filename.endsWith(".xml")) {
+          filename += ".xml";
+      }
+
+      // ダウンロード処理
+      const blob = new Blob([xmlText], {type: 'text/xml'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+
+      log(`XML をダウンロードしました: ${filename}`);
+    });
+    // XMLをダウンロード　終
+
+    // コンソールに表示するカスタムブロック
+    Blockly.Blocks['print_console'] = {
+      init: function() {
+        this.appendValueInput("TEXT")
+            .setCheck("String")
+            .appendField("コンソールに表示");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(160);
+        this.setTooltip("コンソールに文字を表示します");
+        this.setHelpUrl("");
+      }
+    };
+
+    Blockly.JavaScript['print_console'] = function(block) {
+      var value_text = Blockly.JavaScript.valueToCode(block, 'TEXT', Blockly.JavaScript.ORDER_ATOMIC) || "''";
+      var code = 'console.log(' + value_text + ');\n';
+      return code;
+    };
+    // コンソールに表示するカスタムブロック　終
+
+    // 配列のindex番目を取り出すカスタムブロック
+    Blockly.Blocks['array_get_index'] = {
+      init: function() {
+        this.appendValueInput("ARRAY")
+          .setCheck(["Array", "List"])
+          .appendField("リスト");
+        this.appendValueInput("INDEX")
+          .setCheck("Number")
+          .appendField("の");
+        this.appendDummyInput()
+          .appendField("番目の値");
+        this.setOutput(true, null);
+        this.setColour(255);
+        this.setTooltip("配列の index 番目の値を返します（0 始まり）");
+      }
+    };
+
+    Blockly.JavaScript['array_get_index'] = function(block) {
+      var array = Blockly.JavaScript.valueToCode(block, 'ARRAY', Blockly.JavaScript.ORDER_NONE) || "[]";
+      var index = Blockly.JavaScript.valueToCode(block, 'INDEX', Blockly.JavaScript.ORDER_NONE) || "0";
+      var code = `${array}[${index}]`;
+      return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+    // 配列のindex番目を取り出すカスタムブロック　終
+
+    // 配列のindex番目に値をセットするカスタムブロック
+    Blockly.Blocks['array_set_index'] = {
+      init: function() {
+        this.appendValueInput("ARRAY")
+          .setCheck(["Array", "List"])
+          .appendField("リスト");
+        this.appendValueInput("INDEX")
+          .setCheck("Number")
+          .appendField("の");
+        this.appendValueInput("VALUE")
+          .appendField("番目に");
+        this.appendDummyInput()
+          .appendField("をセットする");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(255);
+        this.setTooltip("配列の index 番目に値をセットします（0 始まり）");
+      }
+    };
+
+    Blockly.JavaScript['array_set_index'] = function(block) {
+      var array = Blockly.JavaScript.valueToCode(block, 'ARRAY', Blockly.JavaScript.ORDER_NONE) || "[]";
+      var index = Blockly.JavaScript.valueToCode(block, 'INDEX', Blockly.JavaScript.ORDER_NONE) || "0";
+      var value = Blockly.JavaScript.valueToCode(block, 'VALUE', Blockly.JavaScript.ORDER_NONE) || "null";
+
+      var code = `${array}[${index}] = ${value};\n`;
+      return code;
+    };
+    // 配列のindex番目に値をセットするカスタムブロック　終
+
+    // ファイルの読み込み
+    const exampleFiles = [
+      "samples/FE2009_Q8_1.xml",
+      "samples/FE2009_Q8_2.xml",
+      "samples/FE2011_Q8_1.xml"
+    ];
+
+    function loadNextExample() {
+      loadExampleAt(exampleIndex + 1);
+    }
+
+    function loadPrevExample() {
+      loadExampleAt(exampleIndex - 1);
+    }
+
+
+    async function loadExampleAt(index) {
+      try {
+        exampleIndex = (index + exampleFiles.length) % exampleFiles.length;
+
+        const res = await fetch(exampleFiles[exampleIndex]);
+        const xmlText = await res.text();
+        const dom = Blockly.Xml.textToDom(xmlText);
+
+        workspace.clear();
+        Blockly.Xml.domToWorkspace(dom, workspace);
+
+        log(`サンプルを読み込みました: ${exampleFiles[exampleIndex]}`);
+        generateCode();
+      } catch (e) {
+        log('サンプルXMLの読み込みに失敗しました: ' + e);
+      }
+    }
+
+    // ファイルの読み込み　終
+
+    // 初期レイアウト（必要ならここにブロックを追加）
+    window.addEventListener('load', () => {
+      // 画面初期サイズ調整
+      onResize();
+    });
+
+
+  </script>
+</body>
+</html>
